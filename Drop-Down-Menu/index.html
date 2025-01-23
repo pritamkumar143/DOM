@@ -1,0 +1,14 @@
+<ul id="dropdown-menu">
+    <li onclick="highlightItem(this)">Item 1</li>
+    <li onclick="highlightItem(this)">Item 2</li>
+    <li onclick="highlightItem(this)">Item 3</li>
+</ul>
+
+<script>
+function highlightItem(item) {
+    const dropdown = document.getElementById('dropdown-menu');
+    Array.from(dropdown.children).forEach(li => li.style.backgroundColor = '');
+    item.style.backgroundColor = 'lightblue';
+    console.log(item.textContent);
+}
+</script>
