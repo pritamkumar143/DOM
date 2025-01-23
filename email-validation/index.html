@@ -1,0 +1,23 @@
+<input type="email" id="email-input" placeholder="Enter your email">
+<button onclick="validateEmail()">Validate Email</button>
+
+<script>
+    function validateEmail() {
+        const emailInput = document.getElementById('email-input');
+        const email = emailInput.value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (emailPattern.test(email)) {
+            emailInput.classList.remove('error');
+            console.log('Valid email');
+        } else {
+            emailInput.classList.add('error');
+            console.log('Invalid email');
+        }
+    }
+</script>
+
+<style>
+    .error {
+        border: 2px solid red;
+    }
+</style>
