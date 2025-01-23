@@ -1,0 +1,19 @@
+<button onclick="showModal()">Show Modal</button>
+
+<script>
+    function showModal() {
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        modal.style.backgroundColor = '#fff';
+        modal.style.padding = '20px';
+        modal.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+        modal.innerHTML = `
+        <p>This is a modal popup!</p>
+        <button onclick="this.parentElement.remove()">Close</button>
+    `;
+        document.body.appendChild(modal);
+    }
+</script>
